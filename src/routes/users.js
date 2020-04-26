@@ -1,9 +1,7 @@
 const {Router} = require('express');
-
 const Route = Router();
-
-module.exports = Route.get('/',(req,res) => {
-    return res.status(200).json({
-        message: "User found"
-    })
-})
+const UserCreate = require('../controllers/UserCreate')
+const UserAuth = require('../controllers/AuthController')
+Route.post('/create',UserCreate)
+Route.post('/login',UserAuth)
+module.exports = Route;
