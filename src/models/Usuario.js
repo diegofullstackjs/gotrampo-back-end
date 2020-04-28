@@ -1,6 +1,5 @@
 const {Schema,model} = require('mongoose')
-module.exports = model('usuarios',
-new Schema({
+const Usuario = new Schema({
     name:{type:String,required:true},
     phone:{type:String,required:true,unique:true},
     email:{type:String,required:true,unique: true},
@@ -22,4 +21,4 @@ new Schema({
         default: Date.now
     }
 })
-)
+module.exports = model('usuarios',Usuario)

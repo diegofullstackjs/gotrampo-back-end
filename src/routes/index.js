@@ -1,9 +1,8 @@
+const MainController = require('../controllers/MainController')
+
 const {Router} = require('express');
 
 const Route = Router();
 
-module.exports = Route.get('/',(req,res) => {
-    return res.status(200).json({
-        message: "User found"
-    })
-})
+Route.post('/', MainController.fetch)
+module.exports = Route;
