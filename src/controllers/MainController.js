@@ -6,7 +6,7 @@ module.exports.fetch = async (req,res) =>{
         const find = await UserModel.find({
             location:{
                 $near:{
-                    $maxDistance: 0,
+                    $minDistance: 0,
                     $maxDistance: 1000,
                     $geometry: {
                      type: "Point",
