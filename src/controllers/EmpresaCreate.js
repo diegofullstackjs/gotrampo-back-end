@@ -1,8 +1,8 @@
-const UserModel = require('../models/Usuario');
+const EmpresaCreate = require('../models/Empresa');
 
 module.exports = async (req,res) => {
     try{
-        const data = await UserModel.create(req.body);
+        const data = await EmpresaCreate.create(req.body);
 
         return res.status(200).json(data)
     }catch(e){
