@@ -1,7 +1,6 @@
 const UserModel = require('../models/Usuario');
 
 module.exports = async (req,res) => {
-    console.log(req.body)
     try{
         const data = await UserModel.create(req.body);
 
